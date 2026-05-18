@@ -125,9 +125,9 @@ nav.scrolled {
 
 /* ─── Hero ─────────────────────────────────────────── */
 #hero {
-  min-height: 100vh;
+  min-height: 95vh;
   display: flex; flex-direction: column; justify-content: center;
-  padding: 80px 8% 40px;
+  padding: 72px 8% 32px;
   position: relative; overflow: hidden;
 }
 .hero-canvas {
@@ -1148,9 +1148,9 @@ document.querySelectorAll('[data-tilt]').forEach(card => {
 const canvas = document.getElementById('particleCanvas');
 const ctx = canvas.getContext('2d');
 let particles = [];
-function resizeCanvas() {
-  const hero = document.getElementById("hero"); canvas.width = hero.offsetWidth;
-  canvas.height = hero.offsetHeight;
+function resizeCanvas() { 
+  canvas.width = window.innerWidth;
+  canvas.height = document.getElementById("hero").offsetHeight;
 }
 resizeCanvas();
 window.addEventListener('resize', resizeCanvas);
